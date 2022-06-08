@@ -11,11 +11,15 @@
     $name = $_GET["name"];
     $mail = $_GET["mail"];
     $age = $_GET["age"];
-    if (strlen($name) > 3 && strpos($mail, ".", "@") && is_numeric($age) ) {
+    $checkname = strlen($name) > 3;
+    $checkmailat = strpos($mail, "@");
+    $checkmaildot = strpos($mail, ".");
+    $checkage = is_numeric($age);
+        if ($checkname && $checkmailat && $checkmaildot && $checkage) {
         echo "Accesso riuscito" ; 
     } else {
         echo "Accesso negato"; 
-    }
+    };
     
     
     ?>

@@ -53,8 +53,10 @@ $posts = [
 ?>
 
 <?php for ($i = 0; $i < count($posts); $i++ ) { 
-    $risultato = $risultato_calendario[$i];
-?>
+    $chiavi = array_keys($posts);
+    echo "$chiavi"
+    ?>  
+<?php  } ?>
     
 </body>
 </html>
