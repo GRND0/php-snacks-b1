@@ -54,11 +54,18 @@ $posts = [
 
 
 
-<?php for ($i = 0; $i < count($posts); $i++ ) { 
-    echo $posts;
+
+<?php 
+
+$dates = array_keys($posts);
+for ($i = 0; $i < count($dates); $i++ ) { 
+    $date = $dates[$i];
+    echo $dates[$i];
+
     echo "<ul>";
-    for ($k = 0; $k < 3; $k++) {
-        echo "<li>" .$posts[$i][$k]. "</li>";
+    for ($k = 0; $k < count($posts[$date]); $k++) {
+
+        echo "<li>" . $posts[$date][$k]['title'] . " " . $posts[$date][$k]['author'] . " " . $posts[$date][$k]['text'] . "</li>";
     } 
     echo "</ul>";
   ?>  
