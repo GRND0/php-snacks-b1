@@ -52,11 +52,17 @@ $posts = [
 ];
 ?>
 
+
+
 <?php for ($i = 0; $i < count($posts); $i++ ) { 
-    $chiavi = array_keys($posts);
-    echo "$chiavi"
-    ?>  
-<?php  } ?>
+    echo $posts;
+    echo "<ul>";
+    for ($k = 0; $k < 3; $k++) {
+        echo "<li>" .$posts[$i][$k]. "</li>";
+    } 
+    echo "</ul>";
+  ?>  
+ <?php  } ?> 
     
 </body>
 </html>
